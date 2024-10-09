@@ -1,0 +1,18 @@
+[project]
+authors = ["Mario Negro Ponzi <marionegroponzi@gmail.com>"]
+channels = ["pytorch", "conda-forge", "https://conda.modular.com/max"]
+description = "Add a short description here"
+name = "local"
+platforms = ["osx-arm64"]
+version = "0.1.0"
+
+[tasks]
+
+
+[dependencies]
+max = ">=24.5.0,<25"
+pytorch = ">=2.4.1,<3"
+python = ">=3.8,<3.12"
+
+[pypi-options]
+index-url="https://p-nexus-3.development.nl.eu.abnamro.com:8443/repository/python-group/simple/"
