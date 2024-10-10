@@ -1,0 +1,24 @@
+[project]
+authors = ["Mario Negro Ponzi <marionegroponzi@gmail.com>"]
+channels = ["pytorch", "conda-forge", "https://conda.modular.com/max"]
+description = "Add a short description here"
+name = "local"
+platforms = ["osx-arm64"]
+version = "0.1.0"
+
+[tasks]
+hello = "mojo hello.mojo"
+dev-server = "fastapi dev main.py"
+server = "fastapi run main.py"
+build = "cd local && magic run mojo build zero.mojo -o zero"
+
+[dependencies]
+max = ">=24.5.0,<25"
+pytorch = ">=2.4.1,<3"
+python = ">=3.8,<3.12"
+
+[pypi-options]
+index-url="https://p-nexus-3.development.nl.eu.abnamro.com:8443/repository/python-group/simple/"
+
+[pypi-dependencies]
+fastapi = { version = ">=0.115.0, <0.116", extras = ["standard"] }
